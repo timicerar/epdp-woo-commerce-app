@@ -8,6 +8,7 @@ import ProtectedRoute from "./src/components/routes/ProtectedRoute"
 import { Login } from "./src/containers/auth"
 import { Categories, CategoriesAdd, CategoriesDetails, CategoriesEdit, CategoriesList } from "./src/containers/categories"
 import { Menu } from "./src/containers/menu"
+import { OstaniZdrav } from "./src/containers/ostani-zdrav"
 import {
     Reports,
     ReportsCoupons,
@@ -50,6 +51,8 @@ const App = observer(() => {
                     <PrivateRoute path={`/reports/sales`} component={ReportsSales} />
                     <PrivateRoute path={`/reports/top-sellers`} component={ReportsTopSellers} />
                     <PrivateRoute path={`/reports`} component={Reports} />
+
+                    <PrivateRoute path={`/ostani-zdrav`} component={OstaniZdrav} />
 
                     <Redirect to={`/login`} />
                     <StatusBar style="auto" />

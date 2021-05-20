@@ -1,0 +1,33 @@
+export interface IOstaniZdrav {
+    update_timestamp: string
+    effective_date: string
+    app_downloads_daily: number
+    app_downloads_cumulated: number
+    app_downloads_7days_sum: number
+    app_downloads_7days_avg: number
+    app_downloads_7days_avg_growthrate: number
+    app_downloads_7days_avg_trend_5percent: number
+    persons_who_shared_keys_daily: number
+    persons_who_shared_keys_cumulated: number
+    persons_who_shared_keys_7days_sum: number
+    persons_who_shared_keys_7days_avg: number
+    persons_who_shared_keys_7days_avg_growthrate: number
+    persons_who_shared_keys_7days_avg_trend_5percent: number
+    tests_total_daily: number
+    labs_registered_cumulated: number
+    labs_connected_cumulated: number
+    seven_day_incidence_1st_reported_daily: number
+    seven_day_incidence_1st_reported_growthrate: number
+    seven_day_incidence_1st_reported_trend_1percent: number
+    infections_effective_daily: number
+    infections_effective_cumulated: number
+    infections_effective_7days_avg: number
+    infections_effective_7days_avg_growthrate: number
+    infections_effective_7days_avg_trend_5percent: number
+    seven_day_r_value_published_daily: number
+    seven_day_r_value_published_growthrate: number
+    seven_day_r_value_published_trend_1percent: number
+    seven_day_r_value_1st_reported_daily: number
+    seven_day_r_value_1st_reported_growthrate: number
+    seven_day_r_value_1st_reported_trend_1percent: number
+}

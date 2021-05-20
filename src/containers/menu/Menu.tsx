@@ -33,6 +33,14 @@ export const Menu = observer(() => {
                 marginBottom={8}
                 borderColor="#111111"
             />
+            <Button
+                title="Ostani zdrav"
+                onPress={() => history.push("/ostani-zdrav")}
+                backgroundColor="#FFFFFF"
+                color="#111111"
+                marginBottom={8}
+                borderColor="#111111"
+            />
             <Button title="Log out" onPress={() => handleLogout()} backgroundColor="#111111" />
         </View>
     )

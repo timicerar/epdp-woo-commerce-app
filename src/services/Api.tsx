@@ -14,6 +14,7 @@ enum HttpMethod {
 
 interface IFetchOptions {
     allow204?: boolean
+    customUrl?: boolean
     cancelTokenSource?: CancelTokenSource
 }
 
@@ -29,7 +30,7 @@ class Api {
 
         return this.request<T>(
             {
-                url: this.generateApiUrl(url),
+                url: options?.customUrl ? url : this.generateApiUrl(url),
                 method: HttpMethod.GET,
                 headers,
                 withCredentials: true,
@@ -58,7 +59,7 @@ class Api {
 
         return this.request<T>(
             {
-                url: this.generateApiUrl(url),
+                url: options?.customUrl ? url : this.generateApiUrl(url),
                 data: parsedBody,
                 headers,
                 method: HttpMethod.PUT,
@@ -88,7 +89,7 @@ class Api {
 
         return this.request<T>(
             {
-                url: this.generateApiUrl(url),
+                url: options?.customUrl ? url : this.generateApiUrl(url),
                 data: parsedBody,
                 headers,
                 method: HttpMethod.POST,
@@ -106,7 +107,7 @@ class Api {
 
         return this.request<void>(
             {
-                url: this.generateApiUrl(url),
+                url: options?.customUrl ? url : this.generateApiUrl(url),
                 headers,
                 method: HttpMethod.DELETE,
                 withCredentials: true,
